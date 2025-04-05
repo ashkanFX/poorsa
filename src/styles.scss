@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+// Color Variables
+$color-primary: #334155;
+$color-secondary: #8D9BAD;
+$color-accent: #026CAE;
+$color-light: #EEEEEE;
+// ─── Vazirmatn ──────────────────────────────
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/assets/fonts/static/Vazirmatn-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/assets/fonts/static/Vazirmatn-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/assets/fonts/static/Vazirmatn-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+// Add more weights if needed...
+
+// ─── WinkySans ─────────────────────────────
+@font-face {
+  font-family: 'WinkySans';
+  src: url('/assets/fonts/static/WinkySans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WinkySans';
+  src: url('/assets/fonts/static/WinkySans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WinkySans';
+  src: url('/assets/fonts/static/WinkySans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+// normalization
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: $color-light;
+}
+// Background color utilities
+.bg-primary   { background-color: $color-primary !important; }
+.bg-secondary { background-color: $color-secondary !important; }
+.bg-accent    { background-color: $color-accent !important; }
+.bg-light     { background-color: $color-light !important; }
+
+// Text color utilities
+.text-primary   { color: $color-primary !important; }
+.text-secondary { color: $color-secondary !important; }
+.text-accent    { color: $color-accent !important; }
+.text-light     { color: $color-light !important; }
+// font
+.f-winky {
+  font-family: 'WinkySans', sans-serif;
+}
+.disableSelect {
+  user-select: none
+}

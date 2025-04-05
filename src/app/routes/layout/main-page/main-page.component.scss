@@ -1,0 +1,54 @@
+.bg-img{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-gradient{
+  background: rgb(255,255,255);
+  background: linear-gradient(270deg, rgba(255,255,255,1) 7%, rgba(255,255,255,0.5690651260504201) 81%, rgba(255,255,255,0) 100%);
+}
+.bg-glass {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.7px);
+  -webkit-backdrop-filter: blur(12.7px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+/* Background circles start */
+.circle {
+  border-radius: 50%;
+  background: linear-gradient(120deg, #1D976C, #2c3e50);
+  top: 400px;
+ }
+
+.circle-1 {
+  height: 300px;
+  width: 300px;
+  opacity: 0.8;
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+  animation-direction: alternate;
+
+}
+
+
+.card-info {
+  height: 260px;
+  width: 100%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(35px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  padding: 30px 30px 30px 30px;
+  overflow: hidden;
+
+}
