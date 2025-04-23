@@ -8,6 +8,7 @@ $color-primary: #334155;
 $color-secondary: #8D9BAD;
 $color-accent: #026CAE;
 $color-light: #EEEEEE;
+$color-light-2: rgba(209, 207, 207, 0.4);
 // ─── Vazirmatn ──────────────────────────────
 @font-face {
   font-family: 'Vazirmatn';
@@ -69,6 +70,7 @@ body {
 .text-secondary { color: $color-secondary !important; }
 .text-accent    { color: $color-accent !important; }
 .text-light     { color: $color-light !important; }
+.text-light-2     { color: $color-light-2 !important; }
 // font
 .f-winky {
   font-family: 'WinkySans', sans-serif;

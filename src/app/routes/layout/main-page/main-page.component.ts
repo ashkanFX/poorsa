@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {NavBarComponent} from "../../../core/nav-bar/nav-bar.component";
-import {navBar} from "../../../shared/interface/nav.interface";
-import {ReplaySubject} from "rxjs";
-import {PrimeIcons} from "primeng/api";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-main-page',
@@ -13,39 +11,30 @@ import {PrimeIcons} from "primeng/api";
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
-export class MainPageComponent {
-  navBarConf: navBar = {
-    textColor: 'text-2-color',
-    upDateNavBar: new ReplaySubject<navBar>(),
-    rightButton: [],
-    leftButton: [
-      {
-        text: ' صفحه اصلی',
-        icon: PrimeIcons.TAG,
-        show: true,
-        clicked: () => {
-        }
-      },
-      {
-        text: ' معرفی محصولات',
-        icon: PrimeIcons.HOME,
-        show: true,
-        clicked: () => {
-        }
-      },
-      {
-        text: ' لیست قیمت',
-        icon: PrimeIcons.ARROW_RIGHT,
-        show: true,
-        clicked: () => {
-        }
-      }, {
-        text: ' تماس با ما',
-        icon: PrimeIcons.ARROW_RIGHT,
-        show: true,
-        clicked: () => {
-        }
-      },
-    ]
-  };
+export class MainPageComponent implements OnInit, OnDestroy {
+downloadPriceList() {
+throw new Error('Method not implemented.');
+}
+openPriceList() {
+throw new Error('Method not implemented.');
+}
+showProducts() {
+throw new Error('Method not implemented.');
+}
+  parallaxOffset = 0;
+
+  constructor(private router: Router) {
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    this.parallaxOffset = window.pageYOffset * 0.4; // Adjust 0.5 to control speed
+  }
+
+  ngOnInit() {
+    // The animation will start automatically when the component loads
+  }
+
+  ngOnDestroy() {
+  }
 }

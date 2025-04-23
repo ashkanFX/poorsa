@@ -12,7 +12,7 @@ import {RippleModule} from "primeng/ripple";
   imports: [
     RouterLink,
     TitleCasePipe,
-    MenubarModule, ButtonModule, RippleModule, NgClass, CommonModule
+    MenubarModule, ButtonModule, RippleModule,   CommonModule
   ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'

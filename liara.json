@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "poorsa": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+     }
+  }
+}

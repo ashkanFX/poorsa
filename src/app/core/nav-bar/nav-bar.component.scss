@@ -3,6 +3,10 @@
   position: absolute;
   width: 100%;
   z-index: 5;
+  background: rgba(255, 255, 255, 0);
+   backdrop-filter: blur(12.7px);
+  -webkit-backdrop-filter: blur(12.7px);
+
 }
 
 .main-nav {
@@ -39,6 +43,9 @@
     padding-bottom: 0;
     height: 70px;
     align-items: center;
+
+    background: rgba(255, 255, 255, 0);
+
   }
 
   #chkToggle:checked + ul.main-nav {
@@ -73,8 +80,4 @@
   .nav-links:hover {
     color:  #8D9BAD;
   }
-}
-#demo {
-  -webkit-box-shadow: 0px 9px 33px -15px #000000;
-  box-shadow: 0px 9px 33px -15px #000000;
 }

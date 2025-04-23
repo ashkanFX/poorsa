@@ -1,32 +1,36 @@
-<app-nav-bar [config]="navBarConf"></app-nav-bar>
-<section class="min-h-screen col-12  bg-img  p-0" style="background-image: url('assets/img/bg-main.jpg')">
-  <div class=" flex align-items-center  justify-content-center ">
-    <div class="col-12 md:col-12 p-0 mt-7" >
-      <section class="overflow-x-hidden " style="height: 93vh">
-        <div class="max-h-full col-12 bg-gradient h-full flex align-items-center justify-content-center ">
-          <section class="md:col-6 col-11   m-auto " dir="rtl" style="height: 40rem">
-            <p class="text-xl font-bold">
-              لورم ایپسوم چیست؟
-            </p>
-<!--            <div class="circle bg-img" style="position: absolute;-->
-<!--    top: 142px;-->
-<!--    left: 299px; background-image: url('assets/img/bg-main.jpg')"  >-->
-<!--              <div class="circle-1"></div>-->
-<!--            </div>-->
-
-            <div class="text-justify line-height-4 text-lg bg-glass p-6">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-              چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-              و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای
-              زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
-              بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت
-              می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
-              شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-
-            </div>
-          </section>
-        </div>
-      </section>
+<div class="col-12 p-0 m-0">
+  <section class="overflow-x-hidden h-screen" style="font-family: system-ui, sans-serif;">
+    <div class="parallax-container">
+      <div class="parallax-bg" 
+           [style.backgroundImage]="'url(assets/img/mainBG.jpg)'"
+           [style.transform]="'translateY(' + parallaxOffset + 'px)'">
+      </div>
+      <div class="content">
+        <section class="content-section flex justify-content-center align-content-center flex-column align-items-start h-30rem text-light md:text-4xl text-1xl font-bold col-8 m-auto col-12 md:col-8" dir="rtl">
+          <p class="text-light-2 text-l md:text-2xl animate-text animate-delay-1">به گلینت خوش آمدید</p>
+          <p class="m-2 animate-text animate-delay-2">ما یک گروه خلاق هستیم</p>
+          <p class="m-2 animate-text animate-delay-3">که برندهای تأثیرگذار و</p>
+          <p class="m-2 animate-text animate-delay-4">تجربیات دیجیتال را طراحی می‌کنیم</p>
+          <div class="flex flex-wrap justify-content-center align-content-center gap-3 mt-7 animate-text animate-delay-5 w-full">
+            <button class="custom-btn">دریافت لیست قیمت</button>
+            <button class="custom-btn">دریافت لیست قیمت</button>
+            <button class="custom-btn">لیست محصولات</button>
+          </div>
+        </section>
+        <div class="home-content__line"></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+ 
+<div class="col-12 p-0 m-0">
+  <section class="overflow-x-hidden bg-oragne-400 h-screen" style="font-family: system-ui, sans-serif;">
+    <div class="parallax-container">
+      <div class="content">
+    
+        <div class="about__line"></div>
+      </div>
+    </div>
+  </section>
+ 
+</div>
+
