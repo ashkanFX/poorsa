@@ -87,7 +87,7 @@
   height: 5rem;
   background-color: #000000;
   position: absolute;
-  right: 3rem;
+  right: 1rem;
   top: 0;
 }
 
@@ -196,7 +196,7 @@
   min-width: 200px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  
+
   &:hover {
     background: #ffffff;
     color: #000000;
@@ -213,32 +213,31 @@
 
   .content-section {
     padding: 1.2rem;
-    
+
     p {
-      font-size: 1.3rem;
+      font-size: 1rem;
       margin-bottom: 0.5rem;
       line-height: 1.8;
     }
 
     .text-light-2 {
-      font-size: 1.6rem;
-      margin-bottom: 1.2rem;
+      font-size: 0.8rem;
+      margin-bottom: 0.6rem;
     }
   }
 
   .custom-btn {
-    padding: 0.9rem 1.5rem;
-    font-size: 1.1rem;
+    padding: 0.9rem 1rem;
+    font-size: 0.7rem;
     min-width: 180px;
-    margin: 5px;
-  }
+   }
 }
 
 /* Medium devices (tablets) */
 @media screen and (min-width: 577px) and (max-width: 991px) {
   .content-section {
     padding: 1.5rem;
-    
+
     p {
       font-size: 1.3rem;
     }
@@ -333,7 +332,7 @@
   .content {
     padding-left: 1rem;
   }
-  
+
   .content-section {
     max-width: 100%;
     padding: 1rem;

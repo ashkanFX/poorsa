@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from "@angular/router";
+import {Route, RouterOutlet} from "@angular/router";
 import {NavBarComponent} from "../../core/nav-bar/nav-bar.component";
 import {navBar} from "../../shared/interface/nav.interface";
 import {ReplaySubject} from "rxjs";
@@ -16,6 +16,8 @@ import {PrimeIcons} from "primeng/api";
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
+  constructor( ) {
+  }
   navBarConf: navBar = {
     textColor: 'text-2-color',
     upDateNavBar: new ReplaySubject<navBar>(),
@@ -24,14 +26,22 @@ export class LayoutComponent {
       {
         text: ' صفحه اصلی',
         icon: PrimeIcons.TAG,
+        router : {
+          component :null,
+          url : 'main'
+        },
         show: true,
         clicked: () => {
-        }
+         }
       },
       {
         text: ' معرفی محصولات',
         icon: PrimeIcons.HOME,
         show: true,
+        router : {
+          component :null,
+          url : 'product'
+        },
         clicked: () => {
         }
       },

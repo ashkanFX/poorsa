@@ -7,7 +7,7 @@
   <ul class="main-nav " id="js-menu" style="padding: 0">
     <ng-container *ngFor="let item  of config.leftButton">
       <li *ngIf="item.show" style="cursor: pointer"
-          routerLink="{{item}}" class=" flex w-full h-3rem   align-items-center justify-content-center
+          routerLink="{{item.router?.url}}" class=" flex w-full h-3rem   align-items-center justify-content-center
           md:w-auto p-3  border-round ">
         <p (click)="clicked(item)" class="nav-links"
            style="text-decoration: none ;  margin: 0">
