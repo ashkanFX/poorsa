@@ -28,6 +28,12 @@ $color-light-2: rgba(209, 207, 207, 0.4);
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: 'BalooBhaijaan2';
+  src: url('/assets/fonts/static/BalooBhaijaan2-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 // Add more weights if needed...
 
 // ─── WinkySans ─────────────────────────────
@@ -75,6 +81,8 @@ body {
 .f-winky {
   font-family: 'WinkySans', sans-serif;
 }
+$main-font: 'BalooBhaijaan2', sans-serif;
+
 .disableSelect {
   user-select: none
 }
