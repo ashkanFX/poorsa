@@ -25,33 +25,7 @@
   border: 1px solid rgba(255, 255, 255, 1);
 }
 
-/* Animated circle */
-.circle {
-  border-radius: 50%;
-  background: linear-gradient(120deg, #1D976C, #2c3e50);
-  top: 400px;
-}
 
-.circle-1 {
-  height: 300px;
-  width: 300px;
-  opacity: 0.8;
-  animation: float 6s infinite alternate 3.5s cubic-bezier(0.54, 0.085, 0.5, 0.92);
-  -webkit-animation: float 6s infinite alternate 3.5s cubic-bezier(0.54, 0.085, 0.5, 0.92);
-}
-
-/* Card styles */
-.card-info {
-  height: 260px;
-  width: 100%;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(35px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
-  padding: 30px;
-  overflow: hidden;
-}
 
 /* Button styles */
 .btn {
@@ -75,7 +49,7 @@
   display: block;
   width: 3px;
   height: 5rem;
-  background-color: #026CAE;
+  background-color: #ffffff;
   position: absolute;
   right: 3rem;
   bottom: 0;
@@ -85,7 +59,7 @@
   display: block;
   width: 3px;
   height: 5rem;
-  background-color: #000000;
+  background-color: #00c2ff;
   position: absolute;
   right: 1rem;
   top: 0;
@@ -166,10 +140,8 @@
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.6;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 0.5rem;
-    color: #ffffff;
-    text-align: right;
+     margin-bottom: 0.5rem;
+     text-align: right;
   }
 
   .text-light-2 {
@@ -227,9 +199,9 @@
   }
 
   .custom-btn {
-    padding: 0.9rem 1rem;
-    font-size: 0.7rem;
-    min-width: 180px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    min-width: 272px;
    }
 }
 

@@ -1,12 +1,12 @@
 <nav class="navbar   text-light    " >
   <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
-    <i class="pi-align-justify pi"></i>
+    <i class="text-black-alpha-90 pi-align-justify  pi"></i>
   </label>
   <img style="margin-left: 10% ;width: 10%" src="assets/logo/logo.png">
   <input type="checkbox" id="chkToggle">
   <ul class="main-nav " id="js-menu" style="padding: 0">
     <ng-container *ngFor="let item  of config.leftButton">
-      <li *ngIf="item.show" style="cursor: pointer"
+      <li *ngIf="item.show" style="cursor: pointer ; color :cornflowerblue"
           routerLink="{{item.router?.url}}" class=" flex w-full h-3rem   align-items-center justify-content-center
           md:w-auto p-3  border-round ">
         <p (click)="clicked(item)" class="nav-links"

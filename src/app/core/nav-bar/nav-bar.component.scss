@@ -3,7 +3,7 @@
   position: absolute;
   width: 100%;
   z-index: 5;
-  background: #8d9bad8c;
+  background: rgb(255 255 255 / 64%);
    backdrop-filter: blur(12.7px);
   -webkit-backdrop-filter: blur(12.7px);
 
@@ -19,7 +19,7 @@
 
 .navbar-toggle {
   position: absolute;
-  top: 10px;
+  top: 6px;
   right: 10%;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.8);
@@ -44,7 +44,7 @@
     height: 70px;
     align-items: center;
 
-    background: rgba(255, 255, 255, 0);
+    background: rgb(255 255 255 / 64%);
 
   }
 
