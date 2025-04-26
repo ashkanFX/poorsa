@@ -40,7 +40,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
         }
       });
     }, {
-      threshold: 0.2 // 30% visible before triggering
+      threshold: 0.5 // 30% visible before triggering
     });
 
     observer.observe(this.blockSection.nativeElement);
