@@ -86,3 +86,24 @@ $main-font: 'BalooBhaijaan2', sans-serif;
 .disableSelect {
   user-select: none
 }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00cdf1 rgb(255, 255, 255);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00cdf1;
+  border-radius: 0px;
+  border: 0px dashed rgba(255, 255, 255, 0);
+}

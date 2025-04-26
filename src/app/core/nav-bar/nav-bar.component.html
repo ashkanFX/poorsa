@@ -1,10 +1,12 @@
-<nav class="navbar   text-light    " >
+<nav class="navbar   text-light    md:flex-row   " style="min-height: 55px ;display: flex
+;
+    flex-direction: column;" >
   <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
     <i class="text-black-alpha-90 pi-align-justify  pi"></i>
   </label>
-  <img style="margin-left: 10% ;width: 10%" src="assets/logo/logo.png">
+  <img style="margin-left: 10% ; " width="90" height="55" src="assets/logo/logo.svg">
   <input type="checkbox" id="chkToggle">
-  <ul class="main-nav " id="js-menu" style="padding: 0">
+  <ul class="main-nav " id="js-menu" style="padding: 0" dir="rtl">
     <ng-container *ngFor="let item  of config.leftButton">
       <li *ngIf="item.show" style="cursor: pointer ; color :cornflowerblue"
           routerLink="{{item.router?.url}}" class=" flex w-full h-3rem   align-items-center justify-content-center

@@ -1,12 +1,14 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {NavBarComponent} from "../../../core/nav-bar/nav-bar.component";
 import {Router} from "@angular/router";
+import {FooterComponent} from "../../../core/footer/footer.component";
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
   imports: [
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
