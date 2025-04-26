@@ -1,6 +1,4 @@
-<nav class="navbar   text-light    md:flex-row   " style="min-height: 55px ;display: flex
-;
-    flex-direction: column;" >
+<nav class="navbar   text-light    md:flex-row   " style="min-height: 55px ;display: flex;flex-direction: column;">
   <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
     <i class="text-black-alpha-90 pi-align-justify  pi"></i>
   </label>
@@ -13,7 +11,7 @@
           md:w-auto p-3  border-round ">
         <p (click)="clicked(item)" class="nav-links"
            style="text-decoration: none ;  margin: 0">
-          {{item.text | titlecase}}</p>
+          {{ item.text | titlecase }}</p>
       </li>
     </ng-container>
   </ul>

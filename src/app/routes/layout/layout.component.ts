@@ -4,14 +4,16 @@ import {NavBarComponent} from "../../core/nav-bar/nav-bar.component";
 import {navBar} from "../../shared/interface/nav.interface";
 import {ReplaySubject} from "rxjs";
 import {PrimeIcons} from "primeng/api";
+import { FooterComponent } from "../../core/footer/footer.component";
 
 @Component({
   selector: 'app-layout',
   standalone: true,
   imports: [
     RouterOutlet,
-    NavBarComponent
-  ],
+    NavBarComponent,
+    FooterComponent
+],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })

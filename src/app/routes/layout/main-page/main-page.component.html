@@ -25,10 +25,11 @@
       </div>
     </div>
   </section>
-  <div class="col-12 p-0 m-0">
+  <div #blockSection   class=" block-section col-12 p-0 m-0">
+
     <div class="block-section ">
       <div class="block-header flex min-h-screen" style="background-color: #00CDF1" dir="rtl">
-        <div class="block-content m-auto">
+        <div class="block-content m-auto fade-in" *ngIf="isVisible"  >
           <div class="ng-star-inserted">
             <div class="surface-section px-3 py-5 md:px-6 lg:px-8 text-700">
               <div class="flex flex-wrap p-4" style="background-color: white !important;">
@@ -67,44 +68,8 @@
   </div>
   <div class="col-12 p-0 m-0">
     <div class="block-section ">
-      <div class="block-header flex min-h-screen" style="background-color: #ffffff" dir="rtl">
-        <div class="block-content m-auto">
-          <div class="ng-star-inserted">
-            <div class="surface-section px-3 py-5 md:px-6 lg:px-8 text-700">
-              <div class="flex flex-wrap p-4" style="background-color: white !important;">
-                <div class="w-full lg:w-6 pl-0 lg:pl-5 flex flex-column">
-                  <div class="font-normal text-2xl mt-3 mb-3 text-center text-900"> لورم ایپسوم متن ساختگی با تولید
-                    سادگی نامفهوم از صنعت چاپ
-                  </div>
-                  <div class="text-600 mb-5">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</div>
-                  <p class="line-height-3 mt-0 mb-5    " style="text-align: justify ;color:#616161"> لورم ایپسوم متن
-                    ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
-                    روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
-                    متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
-                    فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
-                    دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
-                    دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. </p>
-                  <ul class="pt-0 px-5 mt-0 mb-5">
-                    <li class="line-height-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
-                    <li class="line-height-3"> و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</li>
-                    <li class="line-height-3"> از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها</li>
-                  </ul>
-                  <p class="line-height-3 mt-0 mb-5    " style="text-align: justify ;color:#616161"> لورم ایپسوم متن
-                    ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
-                    روزنامه و مجله در ستون و سطرآنچنان که بگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
-                    قرار گیرد. </p>
-                </div>
-                <div class="w-full lg:w-6 pr-0 lg:pr-5  ">
-                  <img src="assets/img/box.jpg" alt="Image" class="w-full border-round">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 
 </div>
-<app-footer/>
