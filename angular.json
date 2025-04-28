@@ -79,6 +79,10 @@
               "buildTarget": "poorsa-ui:build:development"
             }
           },
+          "options": {
+            "browserTarget": "poorsa-ui:build",
+            "port": 4300
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

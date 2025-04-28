@@ -9,18 +9,8 @@ import {NgIf} from "@angular/common";
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
-export class MainPageComponent implements OnInit, OnDestroy {
-  downloadPriceList() {
-    throw new Error('Method not implemented.');
-  }
+export class MainPageComponent     {
 
-  openPriceList() {
-    throw new Error('Method not implemented.');
-  }
-
-  showProducts() {
-    throw new Error('Method not implemented.');
-  }
 
   parallaxOffset = 0;
 
@@ -51,10 +41,15 @@ export class MainPageComponent implements OnInit, OnDestroy {
     this.parallaxOffset = window.pageYOffset * 0.4; // Adjust 0.5 to control speed
   }
 
-  ngOnInit() {
-    // The animation will start automatically when the component loads
+  downloadPdf() {
+    const link = document.createElement('a');
+    link.href = 'assets/PDF/sample.pdf'; // your PDF file path
+    link.download = 'sample.pdf'; // desired file name
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
-  ngOnDestroy() {
-  }
+
 }
