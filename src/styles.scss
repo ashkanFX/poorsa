@@ -4,7 +4,7 @@
 @import "primeicons/primeicons.css";
 
 // Color Variables
-$color-primary: #334155;
+$color-primary: #00CDF1;
 $color-secondary: #8D9BAD;
 $color-accent: #026CAE;
 $color-light: #EEEEEE;
@@ -90,7 +90,7 @@ $main-font: 'BalooBhaijaan2', sans-serif;
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #00cdf1 rgb(255, 255, 255);
+  scrollbar-color: $color-primary rgb(255, 255, 255);
 }
 
 /* Chrome, Edge, and Safari */
@@ -103,7 +103,7 @@ $main-font: 'BalooBhaijaan2', sans-serif;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #00cdf1;
+  background-color: $color-primary;
   border-radius: 0px;
   border: 0px dashed rgba(255, 255, 255, 0);
 }

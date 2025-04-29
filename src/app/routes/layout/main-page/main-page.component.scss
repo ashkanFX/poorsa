@@ -1,4 +1,4 @@
-/* Background styles */
+/* ==================== Background Styles ==================== */
 .bg-img {
   background-size: cover;
   background-position: center;
@@ -6,102 +6,35 @@
 }
 
 .bg-gradient {
-  background: rgb(255,255,255);
-  background: linear-gradient(
-    270deg,
-    rgba(255,255,255,1) 7%,
-    rgba(255,255,255,0.57) 81%,
-    rgba(255,255,255,0) 100%
-  );
+  background: linear-gradient(270deg, #fff 7%, rgba(255, 255, 255, 0.57) 81%, rgba(255, 255, 255, 0) 100%);
 }
 
-/* Glass effect */
 .bg-glass {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12.7px);
   -webkit-backdrop-filter: blur(12.7px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid #fff;
 }
 
-
-
-/* Button styles */
-.btn {
-  border-radius: 0;
-  color: #f0edf0;
-  font-size: 14px;
-  padding: 11px 20px;
-  border: 2px solid #fcfcfc;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-.btn:hover {
-  color: #000000;
-  background-color: #ffffff;
-  transition: all 0.5s ease-in-out;
-}
-
-/* Decorative lines */
-.home-content__line {
-  display: block;
-  width: 3px;
-  height: 5rem;
-  background-color: #ffffff;
-  position: absolute;
-  right: 3rem;
-  bottom: 0;
-}
-
-.about__line {
-  display: block;
-  width: 3px;
-  height: 5rem;
-  background-color: #ffffff;
-  position: absolute;
-  right: 1rem;
-  top: 0;
-}
-
-/* Background positioning */
-.bg-position {
-  background-position: right;
-}
-
-/* Responsive styles */
-@media screen and (min-width: 768px) {
-  .bg-position {
-    background-position: bottom;
-  }
-
-  .btn {
-    font-size: 28px;
-  }
-
-  .home-content__line {
-    width: 2px;
-    height: 10.2rem;
-    right: 8rem;
-  }
-
-  .about__line {
-    width: 2px;
-    height: 10.2rem;
-    position: absolute;
-    right: 8rem;
-    top: 0;
-  }
-}
-
+/* ==================== Parallax ==================== */
 .parallax-container {
   position: relative;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
-
+.parallax-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.51), rgba(255,255,255,0));
+  z-index: 1;
+}
 .parallax-bg {
   position: absolute;
   top: 0;
@@ -119,43 +52,53 @@
   z-index: 1;
   height: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
- }
-
-.content-section {
-  position: relative;
-  left: 0;
-  max-width: 1200px;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-family: system-ui, sans-serif;
-  width: 100%;
-  margin: 0 auto;
-
-  p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.6;
-     margin-bottom: 0.5rem;
-     text-align: right;
-  }
-
-  .text-light-2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #ffffff;
-  }
+  padding-left: 1rem;
 }
 
-.custom-btn {
-  background: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
+/* ==================== Content Section ==================== */
+.content-section {
+
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5); /* قبلاً 0.1 بود */
+  backdrop-filter: blur(20px); /* افزایش بلور */
+  border-radius: 20px;
+  padding: 2rem;
+  color: #000; /* متن مشکی شفاف */
+  font-family: system-ui, sans-serif;
+}
+
+.content-section p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+.text-block {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.text-light-2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* ==================== Buttons ==================== */
+.custom-btn,
+.btn {
+  border: 2px solid #fff;
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   font-weight: 400;
@@ -165,106 +108,34 @@
   transition: all 0.3s ease;
   cursor: pointer;
   margin: 5px;
-  min-width: 200px;
+  min-width: 240px;
+  text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-
-  &:hover {
-    background: #ffffff;
-    color: #000000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
 }
 
-/* Small devices (phones) */
-@media screen and (max-width: 576px) {
-  .content {
-    padding: 1rem;
-  }
 
-  .content-section {
-    padding: 1.2rem;
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      line-height: 1.8;
-    }
-
-    .text-light-2 {
-      font-size: 0.8rem;
-      margin-bottom: 0.6rem;
-    }
-  }
-
-  .custom-btn {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-    min-width: 272px;
-   }
+/* ==================== Lines ==================== */
+.home-content__line,
+.about__line {
+  display: block;
+  width: 3px;
+  height: 5rem;
+  background-color: #fff;
+  position: absolute;
 }
 
-/* Medium devices (tablets) */
-@media screen and (min-width: 577px) and (max-width: 991px) {
-  .content-section {
-    padding: 1.5rem;
-
-    p {
-      font-size: 1.3rem;
-    }
-
-    .text-light-2 {
-      font-size: 1.8rem;
-    }
-  }
-
-  .custom-btn {
-    padding: 0.9rem 1.8rem;
-    font-size: 1.1rem;
-    font-family: BalooBhaijaan2;
-    min-width: 220px;
-  }
+.home-content__line {
+  right: 3rem;
+  bottom: 0;
 }
 
-/* Large devices (desktops) */
-@media screen and (min-width: 992px) {
-  .content-section {
-    p {
-      font-size: 1.5rem;
-    }
-
-    .text-light-2 {
-      font-size: 2rem;
-    }
-  }
-
-  .custom-btn {
-    padding: 1rem 2.5rem;
-    font-size: 1.2rem;
-    min-width: 250px;
-  }
+.about__line {
+  right: 1rem;
+  top: 0;
 }
 
-/* Extra large devices (large desktops) */
-@media screen and (min-width: 1200px) {
-  .content-section {
-    p {
-      font-size: 1.8rem;
-    }
-
-    .text-light-2 {
-      font-size: 2.5rem;
-    }
-  }
-
-  .custom-btn {
-    padding: 1.2rem 3rem;
-    font-size: 1.4rem;
-    min-width: 300px;
-  }
-}
-
+/* ==================== Animations ==================== */
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -273,6 +144,17 @@
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -301,43 +183,182 @@
   animation-delay: 1s;
 }
 
-@media screen and (max-width: 768px) {
-  .content {
-    padding-left: 1rem;
-  }
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+.hero-box {
+  max-width: 500px;
+  margin: auto;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* ==================== Responsive ==================== */
 
-  .content-section {
-    max-width: 100%;
+/* Phones */
+@media screen and (max-width: 576px) {
+  .content {
     padding: 1rem;
   }
 
+  .content-section {
+    padding: 1.2rem;
+  }
+
+  .content-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .text-light-2 {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .custom-btn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    min-width: 272px;
+  }
+  .hero-box {
+    margin: 2rem 1rem;
+    padding: 1rem 1rem;
+    border-radius: 0.8rem;
+    gap: 0.75rem;
+  }
+
+  .hero-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-box p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .custom-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  .content-section {
+    padding: 1.5rem;
+  }
+
+  .content-section p {
+    font-size: 1.3rem;
+  }
+  .text-light-2 {
+    font-size: 1.8rem;
+  }
+
+  .custom-btn {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.1rem;
+    min-width: 220px;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 992px) {
+  .content-section p {
+    font-size: 1.5rem;
+  }
+  .text-light-2 {
+    font-size: 2rem;
+  }
+  .custom-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    min-width: 250px;
+  }
+}
+
+/* XL Desktops */
+@media screen and (min-width: 1200px) {
+  .content-section p {
+    font-size: 1.8rem;
+  }
+  .text-light-2 {
+    font-size: 2.5rem;
+  }
+  .custom-btn {
+    padding: 1.2rem 3rem;
+    font-size: 1.4rem;
+    min-width: 300px;
+  }
+}
+
+/* Medium and up */
+@media screen and (min-width: 768px) {
+  .bg-position {
+    background-position: bottom;
+  }
+  .btn {
+    font-size: 28px;
+  }
+  .home-content__line,
+  .about__line {
+    width: 2px;
+    height: 10.2rem;
+    right: 8rem;
+  }
+
+  .content-section p {
+    font-size: 2rem;
+  }
+  .text-light-2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .home-content__line {
     right: 1rem;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .content-section {
-    p {
-      font-size: 2rem;
-    }
-
-    .text-light-2 {
-      font-size: 2.5rem;
-    }
-  }
-}
-.fade-in {
-  animation: fadeIn 1s ease-in forwards;
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
 }
 
-@keyframes fadeIn {
+@keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.hero-heading {
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.8;
+  color: #212121;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.hero-subtitle {
+  font-family: 'BalooBhaijaan2', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #333;
+  text-align: right;
+}
+.highlight {
+  color: #007BFF;
+  font-weight: 700;
 }

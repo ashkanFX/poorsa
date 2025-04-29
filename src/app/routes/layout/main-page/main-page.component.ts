@@ -1,5 +1,4 @@
-import {Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {Router} from "@angular/router";
+import {AfterViewInit, Component, ElementRef, HostListener, OnDestroy, ViewChild} from '@angular/core';
 import {NgIf} from "@angular/common";
 
 @Component({
@@ -9,47 +8,50 @@ import {NgIf} from "@angular/common";
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
-export class MainPageComponent     {
-
-
-  parallaxOffset = 0;
-
-  constructor(private router: Router) {
-  }
-
+export class MainPageComponent implements OnDestroy ,AfterViewInit {
   @ViewChild('blockSection') blockSection!: ElementRef;
   isVisible: boolean = false;
 
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.parallaxOffset = window.scrollY * 0.4;
+  }
+  parallaxOffset = 0;
+  private observer!: IntersectionObserver;
+
+  constructor() {}
   ngAfterViewInit() {
-    const observer = new IntersectionObserver((entries) => {
+    this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          console.log('🔥 Block is visible!');
           this.isVisible = true;
-          observer.unobserve(this.blockSection.nativeElement);
+          this.observer.unobserve(this.blockSection.nativeElement);
         }
       });
     }, {
-      threshold: 0.5 // 30% visible before triggering
+      threshold: 0.5
     });
 
-    observer.observe(this.blockSection.nativeElement);
+    this.observer.observe(this.blockSection.nativeElement);
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    this.parallaxOffset = window.pageYOffset * 0.4; // Adjust 0.5 to control speed
-  }
+
+
 
   downloadPdf() {
     const link = document.createElement('a');
-    link.href = 'assets/PDF/sample.pdf'; // your PDF file path
-    link.download = 'sample.pdf'; // desired file name
+    link.style.display = 'none'; // لینک رو مخفی کن
+    link.href = 'assets/PDF/sample.pdf';
+    link.download = 'لیست قسمت.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   }
 
-
+  ngOnDestroy() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
 }

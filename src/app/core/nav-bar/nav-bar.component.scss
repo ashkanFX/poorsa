@@ -4,7 +4,7 @@
   width: 100%;
   z-index: 5;
   background: rgb(255 255 255 / 64%);
-   backdrop-filter: blur(12.7px);
+  backdrop-filter: blur(12.7px);
   -webkit-backdrop-filter: blur(12.7px);
 
 }
@@ -46,7 +46,7 @@
     height: 70px;
     align-items: center;
 
-    background: rgb(255 255 255 / 64%);
+    background: rgb(255, 255, 255);
 
   }
 
@@ -80,6 +80,6 @@
 
   .logo:hover,
   .nav-links:hover {
-    color:  #8D9BAD;
+    color: #8D9BAD;
   }
 }
