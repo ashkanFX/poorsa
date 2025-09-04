@@ -1,0 +1,253 @@
+/* ===== FLOATING CONTACT ===== */
+.floating-contact {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  direction: rtl;
+}
+
+.floating-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00CDF1 0%, #026CAE 100%);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 205, 241, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #026CAE 0%, #00CDF1 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.floating-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(0, 205, 241, 0.6);
+}
+
+.floating-toggle:hover::before {
+  opacity: 1;
+}
+
+.floating-toggle.active {
+  transform: rotate(45deg);
+  background: #e53e3e;
+}
+
+.floating-toggle i {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.floating-menu {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.floating-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.floating-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.floating-btn:hover::before {
+  opacity: 1;
+}
+
+.floating-btn i {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-label {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.btn-label::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-right: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+.floating-btn:hover .btn-label {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Button Colors */
+.whatsapp {
+  background: #25D366;
+}
+
+.whatsapp:hover {
+  background: #128C7E;
+}
+
+.telegram {
+  background: #0088cc;
+}
+
+.telegram:hover {
+  background: #006699;
+}
+
+.phone {
+  background: #34B7F1;
+}
+
+.phone:hover {
+  background: #1a9bd4;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .floating-contact {
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .floating-toggle {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .floating-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .btn-label {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .floating-contact {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .floating-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .floating-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .floating-menu {
+    gap: 12px;
+  }
+
+  .btn-label {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* Animation for button appearance */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.floating-btn {
+  animation: floatIn 0.3s ease forwards;
+}
+
+.floating-btn:nth-child(1) { animation-delay: 0.1s; }
+.floating-btn:nth-child(2) { animation-delay: 0.2s; }
+.floating-btn:nth-child(3) { animation-delay: 0.3s; }

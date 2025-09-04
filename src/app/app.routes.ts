@@ -1,4 +1,5 @@
 import {Routes} from '@angular/router';
+import { ContactComponent } from './routes/layout/contact/contact.component';
 
 export const routes: Routes = [
 
@@ -13,6 +14,14 @@ export const routes: Routes = [
       {
         path: 'product',
         loadComponent: () => import('./routes/layout/product/product.component').then(m => m.ProductComponent),
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+      },
+      {
+        path: 'price-estimate',
+        loadComponent: () => import('./routes/layout/price-estimate/price-estimate.component').then(m => m.PriceEstimateComponent),
       },
     ]
   },

@@ -1,230 +1,296 @@
-<div class="w-full ">
-  <img src="assets/img/banner-fl-vacumed-fl.jpg" alt="Image"
-       class="block" style="object-fit: cover ; width: inherit">
-</div>
-
-
-<div class="  py-5 px-8" dir="rtl" style="color :black !important;   font-family: 'BalooBhaijaan2', sans-serif;">
-  <div class="flex">
-    <p class=" m-0 ">
-      <span style="color: #999999"> لیست محصولات </span>
-    </p>
-
-  </div>
-  <div class="flex ">
-    <p class=" m-0 mt-2 col-7 ">به عنوان تولیدکننده تخصصی ظروف آزمایشگاهی، با بیش از ۱۵ سال تجربه در طراحی و تولید
-      بطری‌های نمونه‌گیری، همواره در
-      خط مقدم تأمین نیازهای جامعه پزشکی و آزمایشگاهی کشور بوده‌ایم.</p>
-    <div class="col-5" style="display: flex;justify-content: flex-end;   margin-left: 125px;">
-      <button class="custom-btn"> دریافت لیست محصولات</button>
+<div class="product-banner-container">
+  <img src="assets/img/banner-fl-vacumed-fl.jpg" alt="بنر محصولات" class="product-banner" loading="lazy" decoding="async">
+  <div class="banner-overlay">
+    <div class="banner-content">
+      <h1 class="banner-title">محصولات آزمایشگاهی</h1>
+      <p class="banner-subtitle">کیفیت و دقت در هر محصول</p>
     </div>
   </div>
 </div>
 
-<div class="px-4 py-6 md:px-6 md:px-8" style="background-color: #F9F9F9">
+<div class="product-intro-section" dir="rtl">
+  <div class="product-intro-container">
+    <div class="breadcrumb">
+      <span class="breadcrumb-text">لیست محصولات</span>
+    </div>
+    <div class="intro-content">
+      <div class="intro-text">
+        <p class="intro-description">به عنوان تولیدکننده تخصصی ظروف آزمایشگاهی، با بیش از ۱۵ سال تجربه در طراحی و تولید
+          بطری‌های نمونه‌گیری، همواره در
+          خط مقدم تأمین نیازهای جامعه پزشکی و آزمایشگاهی کشور بوده‌ایم.</p>
+      </div>
+      <div class="intro-action">
+        <button class="custom-btn primary-btn">دریافت لیست محصولات</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div class="grid">
-    <div class="col-12 md:col-4 md:p-3 p-0 mt-4">
-      <div class="shadow-4 border-round-3xl h-full" style="background-color: #7cb5ff !important;">
-        <img src="assets/product/IMG_20250709_013302_130.webp" alt="Image"
-             class="max-h-27rem block w-full border-round-top border-round-top-3xl" style="object-fit: cover">
-        <div class="p-2 md:p-4 border-round-bottom-3xl" style="background-color: #7cb5ff">
-          <h3 class="text-center my-1" style="color: whitesmoke" dir="rtl">یورین باتل 90ML شفاف</h3>
-          <div class="card-body md:px-3 p-0">
-            <div class="border-1 border-round border-round-2xl border-round px-3 mx-auto"
-                 style="max-width: 700px; font-family: 'Vazirmatn', sans-serif; min-height: 28rem; border: 1px solid #c1c1c1; background-color: white; display: flex; flex-direction: column; justify-content: center;">
-              <ul class="text-right text-700 pr-4" style="direction: rtl;">
-                <li>ایده‌آل برای جمع‌آوری، حمل و نقل و آنالیز نمونه پاتولوژی/ادراری</li>
-                <li>ظرف نمونه‌گیری ادرار مدرج و دارای درب پیچی‌دار</li>
-                <li>کاملاً آب‌بند و بدون نشتی</li>
-                <li>تولید شده در شرایط استریل و عاری از هرگونه آلودگی میکروبی</li>
-                <li>غیرقابل اتوکلاو و قابل ارائه در انواع استریل و غیر استریل</li>
-                <li>در کارتن‌های ۴۰۵ عددی</li>
-              </ul>
-              <hr class="w-full">
-              <ul class="text-left text-700 pl-4" style="direction: ltr;">
-                <li>Graduated urine sampling container with screw cap</li>
-                <li>Ideal for urine and pathology specimen collection/transportation and analysis</li>
-                <li>Completely watertight and leak-free</li>
-                <li>Produced under sterile conditions and free from any microbial contamination</li>
-                <li>Non autoclave and available in sterile and non sterile versions</li>
-                <li>In cartons of 405 pieces</li>
-              </ul>
+<div class="products-section">
+  <div class="products-container">
+    <div class="products-header">
+      <h2 class="products-title">محصولات ما</h2>
+      <p class="products-subtitle">مجموعه کاملی از محصولات پزشکی با کیفیت بالا</p>
+      <div class="order-section">
+        <p class="order-text">برای سفارش محصولات با ما تماس بگیرید</p>
+        <button class="order-btn" (click)="openWhatsApp()">
+          <i class="fab fa-whatsapp"></i>
+          سفارش از طریق واتساپ
+        </button>
+      </div>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="assets/product/IMG_20250709_013302_130.webp" alt="محصول 1" class="product-image" loading="lazy" decoding="async">
+        </div>
+        <div class="product-header">
+          <h3 class="product-title">یورین باتل 90ML شفاف</h3>
+        </div>
+        <div class="product-content">
+          <div class="product-description">
+            <ul>
+              <li>ایده‌آل برای جمع‌آوری، حمل و نقل و آنالیز نمونه پاتولوژی/ادراری</li>
+              <li>ظرف نمونه‌گیری ادرار مدرج و دارای درب پیچی‌دار</li>
+              <li>کاملاً آب‌بند و بدون نشتی</li>
+              <li>تولید شده در شرایط استریل و عاری از هرگونه آلودگی میکروبی</li>
+              <li>غیرقابل اتوکلاو و قابل ارائه در انواع استریل و غیر استریل</li>
+              <li>در کارتن‌های ۴۰۵ عددی</li>
+            </ul>
+          </div>
+          <div class="product-description-en">
+            <ul>
+              <li>Graduated urine sampling container with screw cap</li>
+              <li>Ideal for urine and pathology specimen collection/transportation and analysis</li>
+              <li>Completely watertight and leak-free</li>
+              <li>Produced under sterile conditions and free from any microbial contamination</li>
+              <li>Non autoclave and available in sterile and non sterile versions</li>
+              <li>In cartons of 405 pieces</li>
+            </ul>
+          </div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-header">مشخصات فنی</div>
+          <div class="data-card-content">
+            <div class="data-item">
+              <span class="data-label">تعداد در کارتن:</span>
+              <span class="data-value">405 عدد</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">حجم:</span>
+              <span class="data-value">90 میلی‌لیتر</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">جنس:</span>
+              <span class="data-value">PS / PE</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">استریل:</span>
+              <span class="data-value">بله / خیر</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">رنگ:</span>
+              <span class="data-value">شفاف</span>
             </div>
           </div>
-          <div class="flex">
-            <div class="col-12">
-              <p-card header="Common Data" class="m-3" dir="ltr">
-                <div class="bg-blue-50 rounded-md shadow-sm text-sm text-gray-800">
-                  <p><strong>Qty:</strong> 405</p>
-                  <p><strong>Vol:</strong> 90 mL</p>
-                  <p><strong>Material:</strong> PS / PE</p>
-                </div>
-              </p-card>
-              <div class="overflow-hidden" style="background-color: white">
-                <p-table
-                  [value]="products"
-                  styleClass="p-datatable-striped p-datatable-gridlines shadow-4 rounded-md"
-                  [rowHover]="true">
-                  <ng-template pTemplate="header">
-                    <tr style="background-color: #026CAE; color: white; font-weight: bold;">
-                      <th class="py-2 px-3 text-center">Name</th>
-                      <th class="py-2 px-3 text-center">Sterility</th>
-                      <th class="py-2 px-3 text-center">Color</th>
-                    </tr>
-                  </ng-template>
-                  <ng-template pTemplate="body" let-product>
-                    <tr
-                      [ngClass]="{'bg-gray-50': product.sterility === 'UN_ST'}"
-                      class="hover:bg-blue-50 transition-colors duration-150 border-b border-gray-200">
-                      <td class="py-2 px-3 text-center">{{ product.name }}</td>
-                      <td class="py-2 px-3 text-center">{{ product.sterility }}</td>
-                      <td class="py-2 px-3 text-center">{{ product.color }}</td>
-                    </tr>
-                  </ng-template>
-                </p-table>
-              </div>
+        </div>
+        <div class="product-table-container">
+          <div class="table-header">
+            <h4>انواع محصولات</h4>
+            <p>انواع مختلف این محصول با مشخصات مختلف</p>
+          </div>
+          <div class="overflow-auto">
+            <p-table
+              [value]="products"
+              styleClass="p-datatable-striped p-datatable-gridlines"
+              [rowHover]="true">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>نام محصول</th>
+                  <th>استریل</th>
+                  <th>رنگ</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-product>
+                <tr [ngClass]="{'bg-gray-50': product.sterility === 'UN_ST'}">
+                  <td>{{ product.name }}</td>
+                  <td>{{ product.sterility }}</td>
+                  <td>{{ product.color }}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="assets/product/IMG_2179.PNG" alt="محصول 2" class="product-image" loading="lazy" decoding="async">
+        </div>
+        <div class="product-header">
+          <h3 class="product-title">یورین باتل 70ML</h3>
+        </div>
+        <div class="product-content">
+          <div class="product-description">
+            <ul>
+              <li>ظرف نمونه گیری مدرج با درب پیچدار</li>
+              <li>مناسب برای جمعآوری و آنالیز نمونه ادرار</li>
+              <li>کاملاً آب‌بند و بدون نشتی</li>
+              <li>تولیدشده در شرایط استریل و عاری از آلودگی میکروبی</li>
+              <li>قابل اتوکلاو در انواع استریل و غیراستریل</li>
+              <li>بسته بندی: عددی</li>
+            </ul>
+          </div>
+          <div class="product-description-en">
+            <ul>
+              <li>Graduated urine sampling container with screw cap</li>
+              <li>Ideal for urine and pathology specimen collection/transportation and analysis</li>
+              <li>Completely watertight and leak-free</li>
+              <li>Produced under steril conditions and free from any microbial contamination</li>
+              <li>Autoclavable (available in sterile and non-sterile versions)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-header">مشخصات فنی</div>
+          <div class="data-card-content">
+            <div class="data-item">
+              <span class="data-label">نام محصول:</span>
+              <span class="data-value">بطری ادرار</span>
             </div>
+            <div class="data-item">
+              <span class="data-label">حجم:</span>
+              <span class="data-value">70 میلی‌لیتر</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">جنس:</span>
+              <span class="data-value">PP/PE</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">اتوکلاو:</span>
+              <span class="data-value">قابل اتوکلاو</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">رنگ:</span>
+              <span class="data-value">شفاف</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-table-container">
+          <div class="table-header">
+            <h4>انواع محصولات</h4>
+            <p>انواع مختلف این محصول با مشخصات مختلف</p>
+          </div>
+          <div class="overflow-auto">
+            <p-table
+              [value]="products2"
+              styleClass="p-datatable-striped p-datatable-gridlines"
+              [rowHover]="true">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>استریل</th>
+                  <th>رنگ</th>
+                  <th>تعداد در کارتن</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-product>
+                <tr [ngClass]="{'bg-gray-50': product.sterility === 'UN_ST'}">
+                  <td>{{ product.sterility }}</td>
+                  <td>{{ product.color }}</td>
+                  <td>{{ product.caseQty }}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="assets/product/IMG_20250709_013201_438.webp" alt="محصول 3" class="product-image" loading="lazy" decoding="async">
+        </div>
+        <div class="product-header">
+          <h3 class="product-title">یورین باتل 70ML نیمه شفاف</h3>
+        </div>
+        <div class="product-content">
+          <div class="product-description">
+            <ul>
+              <li>ظرف نمونه‌گیری ادرار مدرج با درب پیچ‌دار</li>
+              <li>ایده‌آل برای جمع‌آوری و آنالیز نمونه ادرار</li>
+              <li>کاملاً آب‌بند و بدون نشتی</li>
+              <li>تولید شده در شرایط استریل و عاری از هرگونه آلودگی میکروبی</li>
+              <li>قابل اتوکلاو در انواع استریل و غیر استریل</li>
+              <li>بسته‌بندی در کارتن‌های ۵۰۰ و ۷۰۰ عددی</li>
+            </ul>
+          </div>
+          <div class="product-description-en">
+            <ul>
+              <li>Graduated urine sampling container with screw cap</li>
+              <li>Ideal for urine specimen collection and analysis</li>
+              <li>Completely watertight and leak-proof</li>
+              <li>Manufactured under sterile conditions, free from microbial contamination</li>
+              <li>Autoclavable (available in both sterile and non-sterile versions)</li>
+              <li>Packaged in cartons of 500 and 700 pieces</li>
+            </ul>
+          </div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-header">مشخصات فنی</div>
+          <div class="data-card-content">
+            <div class="data-item">
+              <span class="data-label">نام محصول:</span>
+              <span class="data-value">بطری ادرار</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">حجم:</span>
+              <span class="data-value">70 میلی‌لیتر</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">جنس بدنه/درپوش:</span>
+              <span class="data-value">PP/PE</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">اتوکلاو:</span>
+              <span class="data-value">قابل اتوکلاو</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">رنگ:</span>
+              <span class="data-value">نیمه شفاف</span>
+            </div>
+            <div class="data-item">
+              <span class="data-label">بسته‌بندی:</span>
+              <span class="data-value">500 و 700 عددی</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-table-container">
+          <div class="table-header">
+            <h4>انواع محصولات</h4>
+            <p>انواع مختلف این محصول با مشخصات مختلف</p>
+          </div>
+          <div class="overflow-auto">
+            <p-table
+              [value]="products3"
+              styleClass="p-datatable-striped p-datatable-gridlines"
+              [rowHover]="true">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>استریل</th>
+                  <th>رنگ</th>
+                  <th>تعداد در کارتن</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-product>
+                <tr [ngClass]="{'bg-gray-50': product.sterility === 'UN_ST'}">
+                  <td>{{ product.sterility }}</td>
+                  <td>{{ product.color }}</td>
+                  <td>{{ product.caseQty }}</td>
+                </tr>
+              </ng-template>
+            </p-table>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="col-12 lg:col-4 md:p-3 p-0 mt-4">
-      <div class="shadow-4 border-round-3xl h-full" style="background-color: #7cb5ff !important;">
-        <img src="assets/product/IMG_2179.PNG" alt="Image"
-             class="max-h-27rem block w-full border-round-top-3xl" style="object-fit: cover">
-        <div class="md:p-4 p-2 border-round-bottom-3xl" style="background-color: #7cb5ff">
-          <h3 class="text-center my-1" style="color: whitesmoke" dir="rtl">یورین باتل 70ML</h3>
-          <div class="card-body md:px-3 p-0">
-            <div class="border-1 border-round border-round-2xl border-round px-3 mx-auto"
-                 style="max-width: 700px; font-family: 'Vazirmatn', sans-serif; min-height: 28rem; border: 1px solid #c1c1c1; background-color: white; display: flex; flex-direction: column; justify-content: center;">
-              <ul class="text-right text-700 pr-4" style="direction: rtl;">
-                <li>ظرف نمونه گیری مدرج با درب پیچدار</li>
-                <li>مناسب برای جمعآوری و آنالیز نمونه ادرار</li>
-                <li>کاملاً آب‌بند و بدون نشتی</li>
-                <li>تولیدشده در شرایط استریل و عاری از آلودگی میکروبی</li>
-                <li>قابل اتوکلاو در انواع استریل و غیراستریل</li>
-                <li>بسته بندی: عددی</li>
-              </ul>
-              <hr class="w-full">
-              <ul class="text-left text-700 pl-4" style="direction: ltr;">
-                <li>Graduated urine sampling container with screw cap</li>
-                <li>Ideal for urine and pathology specimen collection/transportation and analysis</li>
-                <li>Completely watertight and leak-free</li>
-                <li>Produced under steril conditions and free from any microbial contamination</li>
-                <li>Autoclavable (available in sterile and non-sterile versions)</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex">
-            <div class="col-12">
-              <p-card header="Common Data" class="m-3" dir="ltr">
-                <div class="bg-blue-50 rounded-md shadow-sm text-sm text-gray-800">
-                  <p><strong>Name:</strong> Urine Bottle</p>
-                  <p><strong>Vol:</strong> 70 ml</p>
-                  <p><strong>Material:</strong> PP/PE</p>
-                </div>
-              </p-card>
-              <div class="overflow-hidden" style="background-color: white">
-                <p-table
-                  [value]="products2"
-                  styleClass="p-datatable-sm w-full shadow-4 rounded-md"
-                  [rowHover]="true">
-
-                  <ng-template pTemplate="header">
-                    <tr class="bg-[#026CAE] text-white font-semibold">
-                      <th class="py-2 px-3 text-center">Sterility</th>
-                      <th class="py-2 px-3 text-center">Color</th>
-                      <th class="py-2 px-3 text-center">Case Qty</th>
-                    </tr>
-                  </ng-template>
-
-                  <ng-template pTemplate="body" let-product>
-                    <tr [ngClass]="{'bg-gray-50': product.sterility === 'UN_ST'}"
-                        class="hover:bg-blue-50 transition-colors duration-150 border-b border-gray-200">
-                      <td class="py-2 px-3 text-center">{{ product.sterility }}</td>
-                      <td class="py-2 px-3 text-center">{{ product.color }}</td>
-                      <td class="py-2 px-3 text-center">{{ product.caseQty }}</td>
-                    </tr>
-                  </ng-template>
-                </p-table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-12 lg:col-4 md:p-3 p-0 mt-4">
-      <div class="shadow-4 border-round-3xl h-full" style="background-color: #7cb5ff !important;">
-        <img src="assets/product/IMG_20250709_013201_438.webp" alt="Image"
-             class="max-h-27rem block w-full border-round-top-3xl" style="object-fit: cover">
-        <div class="md:p-4 p-2 border-round-bottom-3xl" style="background-color: #7cb5ff">
-          <h3 class="text-center my-1" style="color: whitesmoke" dir="rtl">یورین باتل 70ML نیمه شفاف</h3>
-          <div class="card-body md:px-3 p-0">
-            <div class="border-1 border-round border-round-2xl border-round px-3 mx-auto"
-                 style="max-width: 700px; font-family: 'Vazirmatn', sans-serif; min-height: 28rem; border: 1px solid #c1c1c1; background-color: white; display: flex; flex-direction: column; justify-content: center;">
-              <ul class="text-right text-700 pr-4" style="direction: rtl;">
-                <li>ظرف نمونه‌گیری ادرار مدرج با درب پیچ‌دار</li>
-                <li>ایده‌آل برای جمع‌آوری و آنالیز نمونه ادرار</li>
-                <li>کاملاً آب‌بند و بدون نشتی</li>
-                <li>تولید شده در شرایط استریل و عاری از هرگونه آلودگی میکروبی</li>
-                <li>قابل اتوکلاو در انواع استریل و غیر استریل</li>
-                <li>بسته‌بندی در کارتن‌های ۵۰۰ و ۷۰۰ عددی</li>
-
-              </ul>
-              <hr class="w-full">
-              <ul class="text-left text-700 pl-4" style="direction: ltr;">
-                <li>Graduated urine sampling container with screw cap</li>
-                <li>Ideal for urine specimen collection and analysis</li>
-                <li>Completely watertight and leak-proof</li>
-                <li>Manufactured under sterile conditions, free from microbial contamination</li>
-                <li>Autoclavable (available in both sterile and non-sterile versions)</li>
-                <li>Packaged in cartons of 500 and 700 pieces</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex">
-            <div class="col-12">
-              <p-card header="Common Data" class="m-3" dir="ltr">
-                <div class="bg-blue-50 rounded-md shadow-sm text-sm text-gray-800">
-                  <p><strong>Name:</strong> Urine Bottle</p>
-                  <p><strong>Vol:</strong> 70 ml</p>
-                  <p><strong>Material base/cap:</strong> PP/PE</p>
-                </div>
-              </p-card>
-              <div class="overflow-hidden" style="background-color: white">
-                <p-table
-                  [value]="products3"
-                  styleClass="p-datatable-sm w-full shadow-4 rounded-md"
-                  [rowHover]="true">
-
-                  <ng-template pTemplate="header">
-                    <tr class="bg-[#026CAE] text-white font-semibold">
-                      <th class="py-2 px-3 text-center">Sterility</th>
-                      <th class="py-2 px-3 text-center">Color</th>
-                      <th class="py-2 px-3 text-center">Case Qty</th>
-                    </tr>
-                  </ng-template>
-
-                  <ng-template pTemplate="body" let-product>
-                    <tr [ngClass]="{'bg-gray-50': product.sterility === 'UN_ST'}"
-                        class="hover:bg-blue-50 transition-colors duration-150 border-b border-gray-200">
-                      <td class="py-2 px-3 text-center">{{ product.sterility }}</td>
-                      <td class="py-2 px-3 text-center">{{ product.color }}</td>
-                      <td class="py-2 px-3 text-center">{{ product.caseQty }}</td>
-                    </tr>
-                  </ng-template>
-                </p-table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
   </div>
 </div>

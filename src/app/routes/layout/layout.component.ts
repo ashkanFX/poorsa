@@ -5,6 +5,7 @@ import {navBar} from "../../shared/interface/nav.interface";
 import {ReplaySubject} from "rxjs";
 import {PrimeIcons} from "primeng/api";
 import { FooterComponent } from "../../core/footer/footer.component";
+import { FloatingContactComponent } from "../../shared/floating-contact/floating-contact.component";
 
 @Component({
   selector: 'app-layout',
@@ -12,7 +13,8 @@ import { FooterComponent } from "../../core/footer/footer.component";
   imports: [
     RouterOutlet,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    FloatingContactComponent
 ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
@@ -57,6 +59,10 @@ export class LayoutComponent {
         text: ' تماس با ما',
         icon: PrimeIcons.ARROW_RIGHT,
         show: true,
+        router : {
+          component :null,
+          url : 'contact'
+        },
         clicked: () => {
         }
       },

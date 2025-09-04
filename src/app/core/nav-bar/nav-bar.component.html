@@ -1,18 +1,72 @@
-<nav class="navbar   text-light    md:flex-row   " style="min-height: 55px ;display: flex;flex-direction: column;">
-  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
-    <i class="text-black-alpha-90 pi-align-justify  pi"></i>
-  </label>
-  <img style="margin-left: 10% ; " width="90" height="55" src="assets/logo/logo.svg">
-  <input type="checkbox" id="chkToggle">
-  <ul class="main-nav " id="js-menu" style="padding: 0" dir="rtl">
-    <ng-container *ngFor="let item  of config.leftButton">
-      <li *ngIf="item.show" style="cursor: pointer ; color :cornflowerblue"
-          routerLink="{{item.router?.url}}" class=" flex w-full h-3rem   align-items-center justify-content-center
-          md:w-auto p-3  border-round ">
-        <p (click)="clicked(item)" class="nav-links"
-           style="text-decoration: none ;  margin: 0">
-          {{ item.text | titlecase }}</p>
+<nav class="navbar" [class.scrolled]="isElevated" role="navigation" aria-label="ناوبری اصلی">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <div class="navbar-brand">
+      <a routerLink="/home/main" class="brand-link" aria-label="صفحه اصلی">
+        <img src="assets/logo/logo.svg" alt="پورسا" class="logo-img" style="height: 28px; width: auto;">
+      </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="navbar-menu desktop-menu" dir="rtl">
+      <ng-container *ngFor="let item of config.leftButton">
+        <li *ngIf="item.show" class="menu-item">
+          <a [routerLink]="item.router?.url" 
+             routerLinkActive="active" 
+             (click)="onNavigate(item)" 
+             class="menu-link">
+            {{ item.text | titlecase }}
+          </a>
+        </li>
+      </ng-container>
+      <li class="menu-item">
+        <a routerLink="/home/price-estimate" 
+           routerLinkActive="active" 
+           class="menu-link">
+          ارزیابی قیمت
+        </a>
       </li>
-    </ng-container>
-  </ul>
+  
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" 
+            type="button" 
+            [class.active]="menuOpen"
+            (click)="toggleMenu()" 
+            aria-label="باز و بسته کردن منو"
+            [attr.aria-expanded]="menuOpen">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" 
+       [class.active]="menuOpen" 
+       (click)="closeMenu()"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.active]="menuOpen" dir="rtl">
+    <ul class="mobile-menu-list">
+      <ng-container *ngFor="let item of config.leftButton">
+        <li *ngIf="item.show" class="mobile-menu-item">
+          <a [routerLink]="item.router?.url" 
+             routerLinkActive="active" 
+             (click)="onNavigate(item)" 
+             class="mobile-menu-link">
+            {{ item.text | titlecase }}
+          </a>
+        </li>
+      </ng-container>
+      <li class="mobile-menu-item">
+        <a routerLink="/home/price-estimate" 
+           routerLinkActive="active" 
+           (click)="closeMenu()"
+           class="mobile-menu-link">
+          ارزیابی قیمت
+        </a>
+      </li>
+ 
+    </ul>
+  </div>
 </nav>

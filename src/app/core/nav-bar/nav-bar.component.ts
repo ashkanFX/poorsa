@@ -1,10 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {RouterLink} from "@angular/router";
-import {navBar} from "../../shared/interface/nav.interface";
-import {CommonModule, NgClass, TitleCasePipe} from "@angular/common";
-import {MenubarModule} from "primeng/menubar";
-import {ButtonModule} from "primeng/button";
-import {RippleModule} from "primeng/ripple";
+import { Component, Input, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { RouterLink } from "@angular/router";
+import { navBar } from "../../shared/interface/nav.interface";
+import { CommonModule, TitleCasePipe } from "@angular/common";
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,29 +9,69 @@ import {RippleModule} from "primeng/ripple";
   imports: [
     RouterLink,
     TitleCasePipe,
-    MenubarModule, ButtonModule, RippleModule,   CommonModule
+    CommonModule
   ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit, OnDestroy {
+  @Input() config: navBar = new navBar();
+  
+  menuOpen: boolean = false;
+  isElevated: boolean = false;
 
-  @Input() config: navBar = new navBar()
-  onShow: string = "hidden"
-
-
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.config.upDateNavBar?.subscribe(res => {
-      this.config = res
-    })
+      this.config = res;
+    });
   }
 
-
-  clicked(item: any) {
-    item.clicked()
+  ngOnDestroy(): void {
+    // Clean up any subscriptions if needed
   }
 
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    this.isElevated = window.scrollY > 10;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(): void {
+    if (window.innerWidth > 768 && this.menuOpen) {
+      this.closeMenu();
+    }
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+    this.updateBodyScroll();
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+    this.updateBodyScroll();
+  }
+
+  onNavigate(item: any): void {
+    this.clicked(item);
+    this.closeMenu();
+  }
+
+  clicked(item: any): void {
+    if (item.clicked) {
+      item.clicked();
+    }
+  }
+
+  private updateBodyScroll(): void {
+    if (typeof document !== 'undefined') {
+      if (this.menuOpen) {
+        document.body.classList.add('menu-open');
+      } else {
+        document.body.classList.remove('menu-open');
+      }
+    }
+  }
 }

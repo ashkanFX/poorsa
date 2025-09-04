@@ -1,13 +1,40 @@
-<div class="block-content">
-  <div class="ng-star-inserted">
-    <div class="surface-section px-4 md:px-6 lg:px-8">
-      <div class=" p-4 flex flex-column sm:flex-row sm:align-items-center justify-content-between">
-        <img src="assets/logo/black-logo-cropped.svg" alt="Image" height="50" srcset="assets/logo/black-logo-cropped.svg">
-        <div>
-          <div class="mt-2 line-height-3">© 2021 Bastion, Inc. All rights reserved</div>
-        </div>
+<footer class="footer" role="contentinfo">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-brand">
+      <a routerLink="/home/main" class="footer-brand-link" aria-label="صفحه اصلی">
+        <img src="assets/logo/black-logo-cropped.svg" alt="پورسا" class="footer-logo" loading="lazy" decoding="async">
+      </a>
+    </div>
 
+    <!-- Navigation Links -->
+    <nav class="footer-nav" aria-label="پیوندهای پاورقی">
+      <a routerLink="/home/main" class="footer-link">صفحه اصلی</a>
+      <a routerLink="/home/product" class="footer-link">معرفی محصولات</a>
+      <a routerLink="/home/price-estimate" class="footer-link">ارزیابی قیمت</a>
+      <a routerLink="/home/contact" class="footer-link">تماس با ما</a>
+      <span class="footer-link disabled" aria-disabled="true">سیاست حفظ حریم خصوصی</span>
+    </nav>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+982112345678" class="contact-link">+98 21 1234 5678</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:info&#64;poorsa.com" class="contact-link">info&#64;poorsa.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/989123456789" class="contact-link" target="_blank">واتساپ</a>
       </div>
     </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright" dir="rtl">
+      © 2024 <span class="brand-name">پورسا</span>، تمامی حقوق محفوظ است.
+    </div>
   </div>
-</div>
+</footer>

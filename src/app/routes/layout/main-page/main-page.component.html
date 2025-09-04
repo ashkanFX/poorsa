@@ -5,27 +5,28 @@
            [style.transform]="'translateY(' + parallaxOffset + 'px)'"></div>
       <div class="content">
         <section
-          class="content-section hero-box flex justify-content-around  align-content-center flex-column align-items-start h-30rem text-light md:text-4xl text-1xl font-bold col-8 m-auto col-12 md:col-8"
+          class="content-section hero-box flex justify-content-center align-content-center flex-column align-items-center h-32rem text-light font-bold col-10 m-auto col-12 md:col-10"
           dir="rtl">
-          <h2 class="w-full text-center text-2xl md:text-2xl hero-heading mt-0 animate-text  highlight fade-up"
+          <h2 class="w-full text-center hero-heading mt-0 fade-up"
               style="animation-delay: 0.3s;">به پورسا خوش آمدید</h2>
-          <div class="  flex flex-column" style="color :black !important;   font-family: 'BalooBhaijaan2', sans-serif;">
-            <p class="m-2 hero-subtitle animate-text animate-delay-2">عتماد <span
-              class="highlight">   آزمایشگاه‌های</span>
+          <div class="flex flex-column hero-content" style="color: #1e293b !important; font-family: 'BalooBhaijaan2', sans-serif;">
+            <p class="hero-subtitle animate-text animate-delay-2">اعتماد <span
+              class="highlight">آزمایشگاه‌های</span>
               حرفه‌ای به
             </p>
-            <p class="m-2 hero-subtitle animate-text animate-delay-3"> پورسا چون دقت کیفیت تجهیزات </p>
-            <p class="m-2 hero-subtitle animate-text animate-delay-4"><span class="highlight">   ماندگاری</span>
-              و <span class="highlight">   ایمنی</span>
+            <p class="hero-subtitle animate-text animate-delay-3">پورسا چون دقت کیفیت تجهیزات</p>
+            <p class="hero-subtitle animate-text animate-delay-4"><span class="highlight">ماندگاری</span>
+              و <span class="highlight">ایمنی</span>
               برای ما اولویت است.
+            </p>
           </div>
           <div
-            class="flex flex-wrap justify-content-center align-content-center gap-3   animate-text animate-delay-5 w-full">
+            class="flex flex-wrap justify-content-center align-content-center gap-2 animate-text animate-delay-5 w-full">
             <div
-              class="flex flex-wrap justify-content-center items-center gap-3 mt-3 animate-text animate-delay-5 w-full">
-              <button class="custom-btn">برآورد قیمت</button>
-              <button class="custom-btn" (click)="downloadPdf()">دریافت لیست قیمت</button>
-              <button class="custom-btn">لیست محصولات</button>
+              class="flex flex-wrap justify-content-center items-center gap-2 mt-2 animate-text animate-delay-5 w-full">
+              <button class="custom-btn primary-btn">برآورد قیمت</button>
+              <button class="custom-btn secondary-btn" (click)="downloadPdf()">دریافت لیست قیمت</button>
+              <button class="custom-btn accent-btn">لیست محصولات</button>
             </div>
           </div>
         </section>
@@ -36,36 +37,38 @@
   <div #blockSection class=" block-section col-12 p-0 m-0">
 
     <div class="block-section ">
-      <div class="block-header flex min-h-screen" style="background-color: #00CDF1" dir="rtl">
+      <div class="block-header flex min-h-screen" dir="rtl">
         <div class="block-content m-auto fade-in animate-delay-5" *ngIf="isVisible">
           <div class="ng-star-inserted">
             <div class="surface-section px-3 py-5 md:px-6 lg:px-8 text-700">
-              <div class="flex flex-wrap p-4" style="background-color: white !important;">
+              <div class="content-card flex flex-wrap p-4">
                 <div class="w-full lg:w-6 pl-0 lg:pl-5 flex flex-column">
-                  <div class="font-normal text-2xl mt-3 mb-3 text-center text-900"> لورم ایپسوم متن ساختگی با تولید
-                    سادگی نامفهوم از صنعت چاپ
+                  <div class="content-title font-normal text-2xl mt-3 mb-3 text-center text-900"> 
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
                   </div>
-                  <div class="text-600 mb-5">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</div>
-                  <p class="line-height-3 mt-0 mb-5    " style="text-align: justify ;color:#616161"> لورم ایپسوم متن
-                    ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
+                  <div class="content-subtitle text-600 mb-5">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</div>
+                  <p class="content-text line-height-3 mt-0 mb-5"> 
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
                     روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
                     متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت
                     فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
                     الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
                     دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
-                    دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. </p>
-                  <ul class="pt-0 px-5 mt-0 mb-5">
+                    دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. 
+                  </p>
+                  <ul class="content-list pt-0 px-5 mt-0 mb-5">
                     <li class="line-height-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</li>
-                    <li class="line-height-3"> و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</li>
-                    <li class="line-height-3"> از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها</li>
+                    <li class="line-height-3">و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</li>
+                    <li class="line-height-3">از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها</li>
                   </ul>
-                  <p class="line-height-3 mt-0 mb-5    " style="text-align: justify ;color:#616161"> لورم ایپسوم متن
-                    ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
+                  <p class="content-text line-height-3 mt-0 mb-5"> 
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
                     روزنامه و مجله در ستون و سطرآنچنان که بگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
-                    قرار گیرد. </p>
+                    قرار گیرد. 
+                  </p>
                 </div>
-                <div class="w-full lg:w-6 pr-0 lg:pr-5  ">
-                  <img src="assets/img/box.jpg" alt="Image" class="w-full border-round">
+                <div class="w-full lg:w-6 pr-0 lg:pr-5">
+                  <img src="assets/img/box.jpg" alt="تصویر محصول" class="w-full border-round content-image" loading="lazy" decoding="async">
                 </div>
               </div>
             </div>

@@ -23,4 +23,11 @@ export class ProductComponent {
     { sterility: 'ST', color: 'Clear / Orange', caseQty: 500 },
     { sterility: 'UN_ST', color: 'Clear / Green', caseQty: 700 }
   ];
+
+  openWhatsApp() {
+    const phoneNumber = '989123456789'; // شماره واتساپ
+    const message = 'سلام، می‌خواهم محصولات پزشکی سفارش دهم. لطفاً راهنمایی کنید.';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  }
 }

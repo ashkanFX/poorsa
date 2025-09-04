@@ -9,6 +9,21 @@ $color-secondary: #8D9BAD;
 $color-accent: #026CAE;
 $color-light: #EEEEEE;
 $color-light-2: rgba(209, 207, 207, 0.4);
+
+// Additional color variables for static colors found in HTML
+$color-gray-light: #F9F9F9;
+$color-blue-light: #7cb5ff;
+$color-gray-medium: #999999;
+$color-gray-dark: #616161;
+$color-gray-border: #c1c1c1;
+$color-white: #ffffff;
+$color-whitesmoke: #f5f5f5;
+$color-blue-dark: #2563eb;
+$color-blue-darker: #1e40af;
+$color-yellow: #fbbf24;
+$color-blue-200: #bfdbfe;
+$color-blue-100: #dbeafe;
+
 // ─── Vazirmatn ──────────────────────────────
 @font-face {
   font-family: 'Vazirmatn';
@@ -34,7 +49,6 @@ $color-light-2: rgba(209, 207, 207, 0.4);
   font-weight: 400;
   font-style: normal;
 }
-// Add more weights if needed...
 
 // ─── WinkySans ─────────────────────────────
 @font-face {
@@ -56,6 +70,7 @@ $color-light-2: rgba(209, 207, 207, 0.4);
   font-style: italic;
 }
 
+// ==================== GLOBAL STYLES ====================
 // normalization
 body {
   margin: 0;
@@ -65,18 +80,27 @@ body {
   font-family: 'Vazirmatn', sans-serif;
   background-color: $color-light;
 }
+
 // Background color utilities
 .bg-primary   { background-color: $color-primary !important; }
 .bg-secondary { background-color: $color-secondary !important; }
 .bg-accent    { background-color: $color-accent !important; }
 .bg-light     { background-color: $color-light !important; }
+.bg-gray-light { background-color: $color-gray-light !important; }
+.bg-blue-light { background-color: $color-blue-light !important; }
+.bg-white     { background-color: $color-white !important; }
 
 // Text color utilities
 .text-primary   { color: $color-primary !important; }
 .text-secondary { color: $color-secondary !important; }
 .text-accent    { color: $color-accent !important; }
 .text-light     { color: $color-light !important; }
-.text-light-2     { color: $color-light-2 !important; }
+.text-light-2   { color: $color-light-2 !important; }
+.text-gray-light { color: $color-gray-medium !important; }
+.text-gray-dark { color: $color-gray-dark !important; }
+.text-white     { color: $color-white !important; }
+.text-whitesmoke { color: $color-whitesmoke !important; }
+
 // font
 .f-winky {
   font-family: 'WinkySans', sans-serif;
@@ -86,6 +110,7 @@ $main-font: 'BalooBhaijaan2', sans-serif;
 .disableSelect {
   user-select: none
 }
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -107,6 +132,7 @@ $main-font: 'BalooBhaijaan2', sans-serif;
   border-radius: 0px;
   border: 0px dashed rgba(255, 255, 255, 0);
 }
+
 .hero-subtitle {
   font-family: 'BalooBhaijaan2', sans-serif;
   font-size: 1.25rem;
@@ -115,6 +141,7 @@ $main-font: 'BalooBhaijaan2', sans-serif;
   color: #333;
   text-align: right;
 }
+
 .highlight {
   color: #007BFF;
   font-weight: 700;

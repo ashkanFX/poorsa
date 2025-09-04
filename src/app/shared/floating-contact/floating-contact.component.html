@@ -1,0 +1,38 @@
+<!-- Floating Contact Buttons -->
+<div class="floating-contact">
+  <!-- Main Toggle Button -->
+  <button class="floating-toggle" 
+          [class.active]="isOpen"
+          (click)="toggleMenu()"
+          aria-label="باز کردن منوی تماس">
+    <i class="fas fa-comments" *ngIf="!isOpen"></i>
+    <i class="fas fa-times" *ngIf="isOpen"></i>
+  </button>
+
+  <!-- Contact Options -->
+  <div class="floating-menu" [class.open]="isOpen">
+    <!-- WhatsApp -->
+    <button class="floating-btn whatsapp" 
+            (click)="openWhatsApp()"
+            title="واتساپ">
+      <i class="fab fa-whatsapp"></i>
+      <span class="btn-label">واتساپ</span>
+    </button>
+
+    <!-- Telegram -->
+    <button class="floating-btn telegram" 
+            (click)="openTelegram()"
+            title="تلگرام">
+      <i class="fab fa-telegram-plane"></i>
+      <span class="btn-label">تلگرام</span>
+    </button>
+
+    <!-- Phone -->
+    <button class="floating-btn phone" 
+            (click)="callPhone()"
+            title="تماس تلفنی">
+      <i class="fas fa-phone"></i>
+      <span class="btn-label">تماس</span>
+    </button>
+  </div>
+</div>
